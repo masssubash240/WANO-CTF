@@ -1,0 +1,9 @@
+OK   admin.py lines=272
+OK   announcements.py lines=130
+OK   audit.py lines=109
+OK   challenges.py lines=227
+OK   competition.py lines=325
+OK   scoreboard.py lines=202
+OK   scoring.py lines=223
+OK   teams.py lines=255
+OK   __init__.py lines=1

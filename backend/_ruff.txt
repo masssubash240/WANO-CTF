@@ -1,0 +1,53 @@
+﻿app\api\routes\auth.py:96:9: B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
+app\api\routes\auth.py:189:9: SIM105 Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`
+app\config.py:14:22: F401 [*] `pydantic.Field` imported but unused
+app\models\accounts.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+app\models\accounts.py:8:86: F401 [*] `sqlalchemy.Text` imported but unused
+app\models\accounts.py:41:30: UP037 [*] Remove quotes from type annotation
+app\models\accounts.py:81:27: UP037 [*] Remove quotes from type annotation
+app\models\announcements.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+app\models\base.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+app\models\challenges.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+app\models\challenges.py:40:29: UP037 [*] Remove quotes from type annotation
+app\models\challenges.py:79:24: UP037 [*] Remove quotes from type annotation
+app\models\challenges.py:85:24: UP037 [*] Remove quotes from type annotation
+app\models\challenges.py:85:25: F821 Undefined name `ChallengeFile`
+app\models\competition.py:8:1: I001 [*] Import block is un-sorted or un-formatted
+app\models\competition.py:22:5: F401 [*] `sqlalchemy.func` imported but unused
+app\models\enums.py:8:7: UP042 Class StrEnum inherits from both `str` and `enum.Enum`
+app\models\files.py:44:23: UP037 [*] Remove quotes from type annotation
+app\models\submissions.py:55:23: UP037 [*] Remove quotes from type annotation
+app\models\submissions.py:56:18: UP037 [*] Remove quotes from type annotation
+app\models\submissions.py:90:23: UP037 [*] Remove quotes from type annotation
+app\models\submissions.py:91:18: UP037 [*] Remove quotes from type annotation
+app\models\teams.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+app\models\teams.py:57:26: UP037 [*] Remove quotes from type annotation
+app\models\teams.py:60:21: UP037 [*] Remove quotes from type annotation
+app\models\teams.py:93:18: UP037 [*] Remove quotes from type annotation
+app\schemas\__init__.py:4:5: F401 `app.schemas.admin.ActivityEventRow` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:5:5: F401 `app.schemas.admin.AdminAdminCreate` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:6:5: F401 `app.schemas.admin.AdminAdminRow` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:7:5: F401 `app.schemas.admin.AdminCategoryInput` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:8:5: F401 `app.schemas.admin.AdminCategoryUpdate` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:9:5: F401 `app.schemas.admin.AdminChallengeCreate` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:10:5: F401 `app.schemas.admin.AdminChallengeRow` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:11:5: F401 `app.schemas.admin.AdminChallengeUpdate` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:12:5: F401 `app.schemas.admin.AdminHintInput` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:13:5: F401 `app.schemas.admin.AdminHintRow` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:14:5: F401 `app.schemas.admin.AdminHintUpdate` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:15:5: F401 `app.schemas.admin.AdminLeaderboardRow` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:16:5: F401 `app.schemas.admin.AdminSolveRow` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:17:5: F401 `app.schemas.admin.AdminStats` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:18:5: F401 `app.schemas.admin.AdminSubmissionRow` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:19:5: F401 `app.schemas.admin.AdminTeamDetail` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:20:5: F401 `app.schemas.admin.AdminTeamMemberRow` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:21:5: F401 `app.schemas.admin.AdminTeamRow` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:22:5: F401 `app.schemas.admin.AdminTeamUpdate` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:23:5: F401 `app.schemas.admin.AdminUserRow` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:24:5: F401 `app.schemas.admin.AdminUserUpdate` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:25:5: F401 `app.schemas.admin.AuditLogRow` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\schemas\__init__.py:26:5: F401 `app.schemas.admin.ScoringAdjustment` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
+app\security\flags.py:88:27: UP012 [*] Unnecessary UTF-8 `encoding` argument to `encode`
+app\services\scoreboard.py:12:30: F401 [*] `app.models.enums.CompetitionStatus` imported but unused
+Found 51 errors.
+[*] 24 fixable with the `--fix` option.

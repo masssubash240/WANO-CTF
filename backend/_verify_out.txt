@@ -1,0 +1,58 @@
+﻿=== service module import status ===
+ok            teams
+ok            challenges
+ok            scoring
+MISSING/FAIL  scoreboard: ImportError: cannot import name 'CompetitionState' from 'app.schemas.competition' (D:\CTF\backend\app\schemas\competition.py)
+ok            announcements
+ok            files
+MISSING/FAIL  admin: ModuleNotFoundError: No module named 'app.services.admin'
+ok            audit
+
+=== model columns ===
+Challenge: ['author', 'category_id', 'connection_info', 'created_at', 'created_by', 'description', 'difficulty', 'flag_format_hint', 'flag_hash', 'id', 'is_demo', 'max_attempts_per_minute', 'points', 'released_at', 'requires_team', 'slug', 'solved_count', 'title', 'updated_at', 'visible']
+ChallengeHint: ['challenge_id', 'cost', 'created_at', 'display_order', 'id', 'is_visible', 'text', 'updated_at']
+HintUnlock: ['challenge_id', 'cost_paid', 'created_at', 'hint_id', 'id', 'team_id', 'user_id']
+Category: ['accent', 'created_at', 'description', 'display_order', 'icon', 'id', 'is_visible', 'name', 'slug', 'updated_at']
+Profile: ['ban_reason', 'college', 'created_at', 'department', 'email', 'email_verified', 'full_name', 'id', 'is_active', 'is_banned', 'last_login_at', 'last_login_ip', 'password_hash', 'phone', 'role', 'updated_at', 'year']
+Submission: ['attempt_number', 'challenge_id', 'id', 'ip_address', 'is_correct', 'points_awarded', 'submitted_at', 'submitted_by', 'submitted_flag_masked', 'submitted_flag_sha256', 'team_id', 'user_agent']
+Solve: ['challenge_id', 'elapsed_seconds', 'hint_penalty', 'id', 'is_first_blood', 'points', 'solved_at', 'solved_by', 'submission_id', 'team_id']
+ScoringEvent: ['created_at', 'created_by', 'delta', 'details', 'id', 'reason', 'team_id']
+Team: ['captain_id', 'college', 'created_at', 'description', 'hint_penalty', 'id', 'last_solve_at', 'name', 'name_normalized', 'score', 'solved_count', 'status', 'status_reason', 'team_code', 'updated_at']
+TeamMember: ['created_at', 'id', 'joined_at', 'role', 'team_id', 'updated_at', 'user_id']
+ActivityEvent: ['challenge_id', 'created_at', 'details', 'event_type', 'id', 'ip_address', 'severity', 'team_id', 'user_id']
+AnnouncementRead: ['announcement_id', 'id', 'read_at', 'user_id']
+
+=== admin schema fields ===
+ActivityEventRow: ['challenge_id', 'created_at', 'details', 'event_type', 'id', 'ip_address', 'severity', 'team_id', 'team_name', 'user_id']
+AdminAdminCreate: ['display_name', 'email', 'password', 'role']
+AdminAdminRow: ['created_at', 'display_name', 'email', 'id', 'is_active', 'last_login_at', 'last_login_ip', 'role', 'updated_at']
+AdminCategoryInput: ['accent', 'description', 'display_order', 'icon', 'is_visible', 'name', 'slug']
+AdminCategoryUpdate: ['accent', 'description', 'display_order', 'icon', 'is_visible', 'name']
+AdminChallengeCreate: ['author', 'category_id', 'category_slug', 'connection_info', 'description', 'difficulty', 'flag', 'flag_format_hint', 'hints', 'is_demo', 'max_attempts_per_minute', 'points', 'released_at', 'requires_team', 'slug', 'title', 'visible']
+AdminChallengeRow: ['author', 'category_id', 'category_name', 'category_slug', 'connection_info', 'created_at', 'description', 'difficulty', 'file_count', 'flag_format_hint', 'has_flag', 'hint_count', 'id', 'is_demo', 'max_attempts_per_minute', 'points', 'released_at', 'requires_team', 'slug', 'solved_count', 'title', 'updated_at', 'visible']
+AdminChallengeUpdate: ['author', 'category_id', 'category_slug', 'connection_info', 'description', 'difficulty', 'flag', 'flag_format_hint', 'max_attempts_per_minute', 'points', 'released_at', 'requires_team', 'slug', 'title', 'visible']
+AdminHintInput: ['cost', 'display_order', 'is_visible', 'text']
+AdminHintRow: ['challenge_id', 'cost', 'display_order', 'id', 'is_visible', 'text', 'unlocks']
+AdminHintUpdate: ['cost', 'display_order', 'is_visible', 'text']
+AdminLeaderboardRow: ['last_solve_at', 'rank', 'score', 'solved_count', 'team_name']
+AdminSolveRow: ['challenge_id', 'challenge_title', 'first_blood', 'id', 'points', 'solved_at', 'team_id', 'team_name']
+AdminStats: ['active_teams_15m', 'active_users_15m', 'average_solve_seconds', 'correct_submissions', 'incorrect_submissions', 'published_challenges', 'server_time', 'solves_last_hour', 'teams_with_solves', 'total_challenges', 'total_participants', 'total_submissions', 'total_teams']
+AdminSubmissionRow: ['attempt_number', 'challenge_id', 'challenge_slug', 'challenge_title', 'id', 'ip_address', 'is_correct', 'points_awarded', 'submitted_at', 'submitted_by', 'submitted_by_name', 'submitted_flag_masked', 'team_id', 'team_name']
+AdminTeamDetail: ['captain_email', 'captain_id', 'college', 'created_at', 'hint_penalty', 'id', 'last_solve_at', 'member_count', 'members', 'name', 'score', 'solved_count', 'status', 'status_reason', 'team_code', 'updated_at']
+AdminTeamMemberRow: ['display_name', 'email', 'id', 'joined_at', 'role', 'user_id']
+AdminTeamRow: ['captain_email', 'captain_id', 'college', 'created_at', 'hint_penalty', 'id', 'last_solve_at', 'member_count', 'name', 'score', 'solved_count', 'status', 'status_reason', 'team_code', 'updated_at']
+AdminTeamUpdate: ['college', 'name', 'status', 'status_reason']
+AdminUserRow: ['ban_reason', 'college', 'created_at', 'department', 'email', 'email_verified', 'full_name', 'id', 'is_active', 'is_banned', 'last_login_at', 'last_login_ip', 'phone', 'role', 'team_id', 'team_name', 'updated_at', 'year']
+AdminUserUpdate: ['ban_reason', 'college', 'department', 'full_name', 'is_active', 'is_banned', 'phone', 'role', 'year']
+AuditLogRow: ['action', 'actor_email', 'actor_id', 'actor_type', 'created_at', 'details', 'id', 'ip_address', 'target_id', 'target_type']
+ORMModel: []
+ScoringAdjustment: ['delta', 'reason']
+TimestampedModel: ['created_at', 'updated_at']
+
+=== service callables ===
+teams: ['_existing_team', '_generate_team_code', 'create_team', 'get_team_or_404', 'join_team', 'leave_team', 'member_count', 'normalize_team_name', 'team_rank', 'to_detail', 'to_member_public', 'to_membership_summary', 'to_public']
+challenges: ['_aware', '_to_file', '_to_hint', 'get_visible_challenge_or_404', 'load_team_progress', 'to_detail', 'to_summary', 'unlock_hint']
+scoring: ['_now', '_record_attempt', 'apply_adjustment', 'attempts_used', 'challenge_already_solved', 'find_solve', 'submit_flag']
+announcements: ['_aware', '_now', 'create_announcement', 'delete_announcement', 'list_published', 'mark_read', 'to_public', 'update_announcement']
+files: ['_aware', '_now', 'allowed_extension_set', 'get_file_or_404', 'guess_mime', 'issue_download_token', 'mark_token_used', 'redeem_token', 'safe_local_path', 'storage_root', 'store_upload', 'validate_extension']
+audit: ['record_activity', 'record_audit', 'record_login_event']

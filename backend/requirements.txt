@@ -1,0 +1,17 @@
+# -----------------------------------------------------------------------------
+# WANO CTF — Backend runtime dependencies (FastAPI + SQLAlchemy 2.0 async)
+# Python 3.11+ (tested on 3.11 – 3.14)
+# -----------------------------------------------------------------------------
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+pydantic>=2.9.0
+pydantic-settings>=2.6.0
+sqlalchemy>=2.0.36
+psycopg[binary,pool]>=3.2.3          # PostgreSQL driver (async + sync)
+aiosqlite>=0.20.0                    # test/offline driver only
+PyJWT[crypto]>=2.9.0                 # JWT verify (HS256 legacy + ES256 JWKS)
+httpx>=0.27.2                        # Supabase Admin/REST calls
+python-multipart>=0.0.12             # file uploads
+email-validator>=2.2.0               # pydantic EmailStr
+orjson>=3.10.7                       # fast JSON responses
+python-dateutil>=2.9.0.post0

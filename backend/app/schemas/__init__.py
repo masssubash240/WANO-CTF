@@ -1,0 +1,115 @@
+"""Pydantic request/response models (the public API contract)."""
+
+from app.schemas.admin import (
+    ActivityEventRow,
+    AdminAdminCreate,
+    AdminAdminRow,
+    AdminCategoryInput,
+    AdminCategoryUpdate,
+    AdminChallengeCreate,
+    AdminChallengeRow,
+    AdminChallengeUpdate,
+    AdminHintInput,
+    AdminHintRow,
+    AdminHintUpdate,
+    AdminLeaderboardRow,
+    AdminSolveRow,
+    AdminStats,
+    AdminSubmissionRow,
+    AdminTeamDetail,
+    AdminTeamMemberRow,
+    AdminTeamRow,
+    AdminTeamUpdate,
+    AdminUserRow,
+    AdminUserUpdate,
+    AuditLogRow,
+    ScoringAdjustment,
+)
+from app.schemas.announcement import (
+    AnnouncementCreate,
+    AnnouncementPublic,
+    AnnouncementUpdate,
+)
+from app.schemas.auth import (
+    AuthConfigResponse,
+    LocalLoginRequest,
+    LocalRegisterRequest,
+    PasswordResetConfirm,
+    PasswordResetRequest,
+    TokenResponse,
+)
+from app.schemas.challenge import (
+    CategoryPublic,
+    ChallengeDetail,
+    ChallengeFilePublic,
+    ChallengeHintPublic,
+    ChallengeSummary,
+    FlagSubmitRequest,
+    FlagSubmitResponse,
+    HintUnlockResponse,
+    SolveRecord,
+)
+from app.schemas.common import ErrorEnvelope, Message, Page, PaginationParams
+from app.schemas.competition import (
+    CompetitionAdminUpdate,
+    CompetitionPublic,
+    CompetitionStateChange,
+)
+from app.schemas.profile import (
+    ProfilePublic,
+    ProfileUpdate,
+    SessionResponse,
+    TeamMembershipSummary,
+)
+from app.schemas.scoreboard import ScoreboardEntry, ScoreboardResponse, TeamSolveDetail
+from app.schemas.team import (
+    TeamCreateRequest,
+    TeamDetail,
+    TeamJoinRequest,
+    TeamMemberPublic,
+    TeamPublic,
+    TeamUpdateRequest,
+)
+from app.schemas.ws import WsEnvelope
+
+__all__ = [
+    "AnnouncementCreate",
+    "AnnouncementPublic",
+    "AnnouncementUpdate",
+    "AuthConfigResponse",
+    "CategoryPublic",
+    "ChallengeDetail",
+    "ChallengeFilePublic",
+    "ChallengeHintPublic",
+    "ChallengeSummary",
+    "CompetitionAdminUpdate",
+    "CompetitionPublic",
+    "CompetitionStateChange",
+    "ErrorEnvelope",
+    "FlagSubmitRequest",
+    "FlagSubmitResponse",
+    "HintUnlockResponse",
+    "LocalLoginRequest",
+    "LocalRegisterRequest",
+    "Message",
+    "Page",
+    "PaginationParams",
+    "PasswordResetConfirm",
+    "PasswordResetRequest",
+    "ProfilePublic",
+    "ProfileUpdate",
+    "ScoreboardEntry",
+    "ScoreboardResponse",
+    "SessionResponse",
+    "SolveRecord",
+    "TeamCreateRequest",
+    "TeamDetail",
+    "TeamJoinRequest",
+    "TeamMemberPublic",
+    "TeamMembershipSummary",
+    "TeamPublic",
+    "TeamSolveDetail",
+    "TeamUpdateRequest",
+    "TokenResponse",
+    "WsEnvelope",
+]
